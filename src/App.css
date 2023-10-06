@@ -1,0 +1,232 @@
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #c3c3c3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  background-color: #0f0f0f;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header p {
+  color: #c3c3c3;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2em;
+}
+
+footer {
+  background-color: #0f0f0f;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 2.5em;
+}
+
+footer p {
+  color: #c3c3c3;
+  font: 0.8em;
+}
+
+.showWinner {
+  width: 30em;
+  background: #0f0f0f;
+  height: 20em;
+  position: absolute;
+  border: #c3c3c3 0.2em solid;
+  box-shadow: 0 0 0.5em 0.15em #c3c3c3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.showWinner img {
+  width: 24em;
+  margin-bottom: 1em;
+}
+
+.showWinner p {
+  color: #c3c3c3;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.15em;
+}
+
+.showWinner button {
+  width: 10em;
+  background: none;
+  border: none;
+  outline: 0.1em solid #c3c3c3;
+  color: #c3c3c3;
+  font-size: 1em;
+  padding-block: 0.2em;
+  text-transform: uppercase;
+}
+
+.blur {
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.game {
+  background: #0f0f0f;
+  display: flex;
+  border-radius: 1em;
+  width: 50em;
+  justify-content: center;
+}
+
+.status {
+  color: #c3c3c3;
+  font-weight: 600;
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.4em;
+  text-align: center;
+  margin-bottom: 0.8em;
+}
+
+.gameBoard {
+  padding: 1em;
+  margin-bottom: 0.5em;
+}
+
+.rowContainer {
+  display: flex;
+  height: auto;
+  background-color: #c3c3c3;
+}
+
+.buttonSquare {
+  width: 10em;
+  height: 10em;
+  background: #0f0f0f;
+  margin: 0.1em;
+}
+
+.buttonImageSquare {
+  width: 5em;
+}
+
+.gameInfo {
+  width: 30em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.gameInfo ul {
+  margin-left: 1em;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75em;
+  margin-top: 3.5em;
+}
+
+.infoItem p {
+  color: #595959;
+  letter-spacing: 0.1em;
+  font-family: monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+
+  body {
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  .game {
+    width: 80vw;
+    height: 40em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .gameBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .buttonSquare {
+    width: 6em;
+    height: 6em;
+  }
+
+  .buttonImageSquare {
+    width: 4em;
+  }
+
+  .gameInfo {
+    padding-top: 1em;
+    pointer-events: none;
+  }
+
+  .gameInfo ul {
+    margin-top: -0.2em;
+    gap: 1.2em;
+  }
+
+  .gameInfo ul li:first-child {
+    display: none;
+  }
+
+  .infoItem p {
+    font-size: 0.9em;
+  }
+
+  .status {
+    font-size: 1.2em;
+  }
+
+  .showWinner {
+    width: 80vw;
+    height: 42em;
+    border-radius: 1em;
+  }
+
+  .showWinner img {
+    width: 18em;
+    margin: 1em 0 2em 0;
+  }
+  
+  .showWinner p {
+    color: #c3c3c3;
+    font-size: 3em;
+    text-transform: uppercase;
+  }
+
+  .showWinner button {
+    width: 10em;
+    font-size: 1.4em;
+  }
+}
